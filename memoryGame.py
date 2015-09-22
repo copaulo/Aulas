@@ -8,5 +8,5 @@ while program == v:
   print("Programa: %s" %p)
   v = input("Você: ")
   program += str(p)
-
+  print('\n' * 100)
 print("\nVocê perdeu!")
