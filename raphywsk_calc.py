@@ -5,16 +5,12 @@ class Cauculator:
         self.window = toplevel
         toplevel.resizable(width=False, height=False)
         toplevel.title('CALCULADORA')
-
-        self.values = '' #Valores digitados
-        
-        
-        # Valores de height e width dos botões
-        
+        self.values = '' #Stores the digitized values
+        # height and width of buttons.
         number_hw = 2
         button_height = 1
         button_width = 4
-        # Valores de padx e pady
+        # variables of padx and pady
         number_padx= 5
         number_pady= 5
         button_pad= 5
@@ -46,7 +42,7 @@ class Cauculator:
         Label(self.f1, text='CALCULATOR',
               font=('Verdana', 20, 'bold')).pack()
 
-        #Botões +, 1, 4, 7 e ,.
+        #Buttons +, 1, 4, 7 e ,.
         self.b_plus = Button(self.f2, text='+', font=('Verdana', 10, 'bold'),
                         fg='red', height=button_height, width=button_width)
         self.b_plus.bind('<Button-1>', self.plus)
@@ -68,7 +64,7 @@ class Cauculator:
         self.b_comma.bind('<Button-1>', self.comma)
         self.b_comma.pack(padx=number_padx, pady=number_pady)
 
-        #Botões -,2, 5 e 8.
+        #Buttons -,2, 5 e 8.
         self.b_minus = Button(self.f3, text='-', font=('Verdana', 10, 'bold'),
                         fg='red', height=button_height, width=button_width)
         self.b_minus.bind('<Button-1>', self.minus)
@@ -90,7 +86,7 @@ class Cauculator:
         self.b0.bind('<Button-1>', self.n0)
         self.b0.pack(padx=number_padx, pady=number_pady)
 
-        #Botões X, 3, 6, 9 e =.
+        #Buttons X, 3, 6, 9 e =.
         self.b_multiplying = Button(self.f4, text='x', font=('Verdana', 10, 'bold'),
                         fg='purple', height=button_height, width=button_width)
         self.b_multiplying.bind('<Button-1>', self.mult)
@@ -113,7 +109,7 @@ class Cauculator:
         self.b_equals.bind('<Button-1>', self.equals)
         self.b_equals.pack(padx=number_padx, pady=number_pady)
 
-        #Botões /, C, Back, Off, Credits
+        #Buttons /, C, Back, Off, Credits
         self.b_division = Button(self.f5, text='/', font=('Verdana', 10, 'bold'),
                         fg='purple', height=button_height, width=button_width)
         self.b_division.bind('<Button-1>', self.divi)
@@ -140,7 +136,7 @@ class Cauculator:
         self.b_credits.bind('<Button-1>', self.txt_credits)
         self.b_credits.pack(padx=button_pad -2, pady=button_pad + 2)
 
-        # Funções da calculadora
+        # Calculator functions.
 
     def n1(self, event):
         self.values += '1'
