@@ -1,3 +1,5 @@
+# This is my first contact with GUI.
+
 from tkinter import *
 
 class Cauculator:
