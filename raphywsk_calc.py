@@ -247,11 +247,15 @@ class Cauculator:
 
     def equals(self, event):
         self.canvas1.delete('numeros')
-        self.values = '%.2f' %eval(self.values)
+        try:
+            self.values = '%.2f' %eval(self.values)
+        except ZeroDivisionError:
+            self.values = 'Error! Division by zero.'
         self.canvas1.create_text(20,50, text=self.values, anchor=W,
                 font=('Verdana', 16, 'bold'), fill='blue',
                 width=190, tag='numeros')
         self.values = str(self.values)
+        if self.values == 'Error! Division by zero.': self.values = ''
 
     def comma(self, event):
         self.values += '.'
